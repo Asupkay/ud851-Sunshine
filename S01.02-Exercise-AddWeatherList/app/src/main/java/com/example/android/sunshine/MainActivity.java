@@ -29,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
 
-        // TODO (2) Use findViewById to get a reference to the weather display TextView
+        // COMPLETED (2) Use findViewById to get a reference to the weather display TextView
         weatherDisplay = (TextView) findViewById(R.id.tv_weather_data);
-        // TODO (3) Create an array of Strings that contain fake weather data
+        // COMPLETED (3) Create an array of Strings that contain fake weather data
         String[] fake_weather_data = {"Today - Sunny 86 degrees","Tomorrow - Rainy 70 degrees","May 18th - Snow 0 degrees"};
-        // TODO (4) Append each String from the fake weather data array to the TextView
+        // COMPLETED (4) Append each String from the fake weather data array to the TextView
         for( String weather:fake_weather_data) {
             weatherDisplay.append(weather + "\n\n\n");
         }
