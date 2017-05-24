@@ -34,7 +34,7 @@ import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 
 import java.net.URL;
 
-// TODO (8) Implement ForecastAdapterOnClickHandler from the MainActivity
+// COMPLETED (8) Implement ForecastAdapterOnClickHandler from the MainActivity
 public class MainActivity extends AppCompatActivity implements ForecastAdapter.ForecastAdapterOnClickHandler {
 
     private RecyclerView mRecyclerView;
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapter.F
          */
         mRecyclerView.setHasFixedSize(true);
 
-        // TODO (11) Pass in 'this' as the ForecastAdapterOnClickHandler
+        // COMPLETED (11) Pass in 'this' as the ForecastAdapterOnClickHandler
         /*
          * The ForecastAdapter is responsible for linking our weather data with the Views that
          * will end up displaying our weather data.
@@ -108,14 +108,14 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapter.F
         new FetchWeatherTask().execute(location);
     }
 
-    // TODO (9) Override ForecastAdapterOnClickHandler's onClick method
+    // COMPLETED (9) Override ForecastAdapterOnClickHandler's onClick method
 
     @Override
     public void onClick(String s) {
         Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
     }
 
-    // TODO (10) Show a Toast when an item is clicked, displaying that item's weather data
+    // COMPLETED (10) Show a Toast when an item is clicked, displaying that item's weather data
 
     /**
      * This method will make the View for the weather data visible and
