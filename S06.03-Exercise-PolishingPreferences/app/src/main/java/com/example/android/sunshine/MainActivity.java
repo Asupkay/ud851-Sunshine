@@ -43,7 +43,7 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements
         ForecastAdapter.ForecastAdapterOnClickHandler, SharedPreferences.OnSharedPreferenceChangeListener,
-        // TODO (3) Implement OnSharedPreferenceChangeListener on MainActivity
+        // COMPLETED (3) Implement OnSharedPreferenceChangeListener on MainActivity
         LoaderCallbacks<String[]> {
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements
 
     private static final int FORECAST_LOADER_ID = 0;
 
-    // TODO (4) Add a private static boolean flag for preference updates and initialize it to false
+    // COMPLETED (4) Add a private static boolean flag for preference updates and initialize it to false
     private static boolean prefUpdates = false;
 
     @Override
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements
 
         Log.d(TAG, "onCreate: registering preference changed listener");
 
-        // TODO (6) Register MainActivity as a OnSharedPreferenceChangedListener in onCreate
+        // COMPLETED (6) Register MainActivity as a OnSharedPreferenceChangedListener in onCreate
         PreferenceManager.getDefaultSharedPreferences(this).registerOnSharedPreferenceChangeListener(this);
     }
 
@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity implements
      * open the Common Intents page
      */
     private void openLocationInMap() {
-        // TODO (9) Use preferred location rather than a default location to display in the map
+        // COMPLETED (9) Use preferred location rather than a default location to display in the map
         String addressString = PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.pref_location_key), getString(R.string.pref_location_default));
         Uri geoLocation = Uri.parse("geo:0,0?q=" + addressString);
 
@@ -331,7 +331,7 @@ public class MainActivity extends AppCompatActivity implements
         mErrorMessageDisplay.setVisibility(View.VISIBLE);
     }
 
-    // TODO (7) In onStart, if preferences have been changed, refresh the data and set the flag to false
+    // COMPLETED (7) In onStart, if preferences have been changed, refresh the data and set the flag to false
 
     @Override
     protected void onStart() {
@@ -343,7 +343,7 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
 
-    // TODO (8) Override onDestroy and unregister MainActivity as a SharedPreferenceChangedListener
+    // COMPLETED (8) Override onDestroy and unregister MainActivity as a SharedPreferenceChangedListener
 
 
     @Override
@@ -391,5 +391,5 @@ public class MainActivity extends AppCompatActivity implements
         prefUpdates = true;
     }
 
-    // TODO (5) Override onSharedPreferenceChanged to set the preferences flag to true
+    // COMPLETED (5) Override onSharedPreferenceChanged to set the preferences flag to true
 }

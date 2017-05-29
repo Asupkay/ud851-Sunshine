@@ -93,7 +93,7 @@ public class SunshinePreferences {
      * "94043,USA" if SharedPreferences have not been implemented yet.
      */
     public static String getPreferredWeatherLocation(Context context) {
-        // TODO (1) Return the user's preferred location
+        // COMPLETED (1) Return the user's preferred location
         /** This will be implemented in a future lesson **/
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String keyForLocation = context.getString(R.string.pref_location_key);
@@ -109,7 +109,7 @@ public class SunshinePreferences {
      * @return true If metric display should be used
      */
     public static boolean isMetric(Context context) {
-        // TODO (2) Return true if the user's preference for units is metric, false otherwise
+        // COMPLETED (2) Return true if the user's preference for units is metric, false otherwise
         /** This will be implemented in a future lesson **/
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
         String keyForUnits = context.getString(R.string.pref_units_key);
